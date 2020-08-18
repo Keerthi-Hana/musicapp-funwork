@@ -146,7 +146,7 @@ SC.initialize({
   });
   $(document).ready(function(){ 
       //stream the track number song
-    SC.stream('/tracks/',function(sound){
+    SC.stream('/tracks/348699679',function(sound){
    
         //function for start button
         $('#start7').click(function(e) {
