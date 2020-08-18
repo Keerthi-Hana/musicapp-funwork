@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My music app</title>
+        <title>MotiveveSongs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <script src="jquery-3.5.1.js"></script>
         <script src="jquery-3.5.1.min.js"></script>
         <script src="//connect.soundcloud.com/sdk.js"></script>
-   <script src="main.js"></script>
+   <script src="motive.js"></script>
 
        <style>
            
@@ -22,11 +22,6 @@
   margin: 0.001px;
  border: 0.1px solid #080808;
 
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 li {
@@ -49,7 +44,7 @@ li a:hover:not(.active1) {
 
 .active1 {
 background-color: rgb(255, 0, 0);
-color:white;
+color:black;
 display: block;
   color: white;
   text-align: center;
@@ -58,7 +53,7 @@ display: block;
 }
 
 .active{
-    background-color:rgba(0, 0, 0, 0.822);
+    background-color:black;
   border: 0.5px dotted rgb(2, 52, 61);
   color:white; 
 }
@@ -79,125 +74,62 @@ background-color: red;
 color:white;
 
 }
-.img{
+img{
 height:400px;
 width:400px;
 border:5px dotted  rgb(15, 15, 15);
 }
  
 
-  .my{
-      text-align:center;
-      font-weight:300;
-      background-color: red;
-      color:white;
-      width:40x;
-  }
+  
 
-#image{
 
-display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-
-}
-.logo{
-  background-color: rgb(219, 219, 219);
-}
  
 
         </style>
         <script></script>
     </head>
     <body>
-      <div class="logo">
-        <img  id="image" src="logo1.jpeg" alt="logo">
-     </div>
        <div id="na">
 
         <ul class="nav">
             <li class="active1"><b><em>mad</em></b>music</li>
-            <li class="active" ><a href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/index.html">Home</a></li>
+            <li ><a href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/index.html">Home</a></li>
       
             <li  style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/love.html">  <em>LOVE </em>Songs</a></li>
             <li   style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/sad.html">  <em> SAD </em>Songs</a></li>
-            <li   style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/motive.html"> <em> MOTIVE</em> Songs</a></li>
+            <li   class="active" style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/motive.html"> <em> MOTIVE</em> Songs</a></li>
             <li   style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/idaikalam.html"><em> IDAIKALAM</em>Songs</a></li>
             <li   style="float:right"><a  href="file:///home/keerthana/Documents/keerthana/Documents/uki/musicapp-funwork/old.html"><em> OLD </em>Songs</a></li>
         </ul>
 
 </div>
 
-<h1 class="my">MY FAVOURITE</h1>
 <br><br>
-
-<img class="img" src="1.gif" alt="image">
+<img src="master.jpeg" alt="image">
 
 <button class="btn1" id="start1">Start</button>
 <button class="btn2" id="stop1">Stop</button>
 
-<img class="img" src="2.gif" alt="image">
+<img src="singa.jpeg" alt="image">
 
 <button class="btn1" id="start2">Start</button>
 <button class="btn2" id="stop2">Stop</button>
 <hr>
-<img class="img" src="3.gif" alt="image">
+<img src="kakki.jpeg" alt="image">
 
 <button class="btn1" id="start3">Start</button>
 <button class="btn2" id="stop3">Stop</button>
 
-<img class="img" src="4.gif" alt="image">
+<img src="96.jpg" alt="image">
 
 <button class="btn1" id="start4">Start</button>
 <button class="btn2" id="stop4">Stop</button>
 <hr>
-<img class="img" src="5.gif" alt="image">
+<img src="ethir.jpg" alt="image">
 
 <button class="btn1" id="start5">Start</button>
 <button class="btn2" id="stop5">Stop</button>
-
-<img class="img" src="6.gif" alt="image">
-
-<button class="btn1" id="start6">Start</button>
-<button class="btn2" id="stop6">Stop</button>
-<hr>
-<img class="img" src="7.gif" alt="image">
-
-<button class="btn1" id="start7">Start</button>
-<button class="btn2" id="stop7"> Stop </button>
-
-<img class="img" src="8.gif" alt="image">
-
-<button class="btn1" id="start8">Start</button>
-<button class="btn2" id="stop8">Stop</button>
-<hr>
-<img class="img" src="9.gif" alt="image">
-
-<button class="btn1" id="start9">Start</button>
-<button class="btn2" id="stop9">Stop</button>
-
-<img class="img" src="10.gif" alt="image">
-
-<button class="btn1" id="start10">Start</button>
-<button class="btn2" id="stop10">Stop</button>
-
-
-<script>
-  window.onscroll = function() {myFunction()};
-  
-  var na = document.getElementById("na");
-  var sticky = na.offsetTop;
-  
-  function myFunction() {
-    if (window.pageYOffset >= sticky) {
-      na.classList.add("sticky")
-    } else {
-      na.classList.remove("sticky");
-    }
-  }
-  </script>
-
 
     </body>
 </html>
